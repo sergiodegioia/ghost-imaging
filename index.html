@@ -18,7 +18,10 @@
         },
       });
       document.getElementById('startAnimation').addEventListener('click', function() {
-            r.play(); // Start the animation when the button is pressed
+        if (r.isPlaying) {
+              r.reset(); // Reset the animation if it's playing
+        }
+        r.play(); // Start the animation when the button is pressed
         });
     </script>
   </body>
