@@ -38,6 +38,11 @@
               Quantum Ghost Imaging
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#conclusions">
+              Conclusions
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -58,7 +63,7 @@
     <div class="row align-items-center">
       <div class="col-sm-6 text-center text-md-start">
         <h1>
-          <div class="display-2">List as photon stream</div>
+          <div class="display-2">Light as a stream of photons</div>
           <div class="display-5 text-muted">Conventional Imaging</div>
         </h1>
 <p class="lead my-4">Let's explain how conventional imaging works considering light as a stream of photons and using as the object one which is transmissive, that is, it has transparent regions through which light is allowed to pass, and opaque regions where light is absorbed and then blocked.</p>
@@ -105,7 +110,7 @@
         });
     </script>
             <p class="card-text mx-5 text-muted">
-             There three elements are shown: on the bottom the source of light (represented by a star), in the middle, occupying the whole field of view of the carema, there is a transmissive rectangular object whose transparent region has a rotated S-shape while the remaning part is opaque; the camera simply represented by its rectangular sensor where all its pixels are visible (it's a very rudimantal sensor because it has only 32 pixels!). 
+             Here three elements are shown: on the bottom, the source of light (represented by a star); in the middle, occupying the whole field of view of the camera, there is a transmissive rectangular object whose transparent region has a reclined S-shape while the remaning part is opaque; the camera simply represented by its rectangular sensor where all its pixels are visible (it's a very rudimantal sensor because it has only 32 pixels! That's why the smooth S-profile is imamged with a sharp-cornered straight line contour). The camera objective has not been shown: its presence between the sensor and the object is fundamental for the imaging to take place. 
             </p>
           </div>
         </div>
@@ -116,17 +121,69 @@
 <section id="quantum_ghost_imaging" class="bg-light">
   <div class="container-lg my-5">
     <div class="row align-items-center">
-      <div class="col-12 text-center text-md-start">
+      <div class="col-sm-6 text-center text-md-start">
         <h1>
           <div class="display-2">Quantum ghost imaging</div>
-          <div class="display-5 text-muted">Conventional Imaging</div>
+          <div class="display-5 text-muted">A quantum inspired technique</div>
         </h1>
-        <p class="lead my-4">Now get back to the quantum ghost imaging. As said the light in general is a stream of photons, and the special light used in quantum ghost imaging photons always occur in pairs in which they are entangled.</p>
+        <p class="lead my-4">Now let's get back to the quantum ghost imaging. As said the light in general is a stream of photons, and the special light used in quantum ghost imaging photons always occur in pairs in which they are entangled.</p>
 <p class="text-muted">Those stream of pairs of entangled photons are produced by letting a laser pass through a nonlinear crystal. A laser is a light source device which emits light made up of photons of equal frequency; when such stream interacts with the said crystal, each photon provided by the laser breaks up in two other photons which are entangled, that is for the conservation principles of the nature have frequencies lower than, but which sum up to, exactly that of the producing photon. Similarly for their momentum: they have both different propagation directions than that of the producing photon but to that of which the direction of the global propagation of the photon pair aligns to, in such a way that they go along directions oriented simmetrically around the direction of the producing photon in a plane containing it. From the crystal then the entangled photons of any pair comes out not aligned between them, with different non-overlapping range of directions: of those two ranges one is chosen to deploy the object followed by the light sensor and the other is where the camera is laid out. Now the light sensor used after the object can really be simply a light detector, without even the ability to sense the light intensity, but only the presence or absence of light.</p>
 <p>At this point the camera starts taking pictures, ideally one for each photon pair generated: and still ideally any picture is totally dark with the exception of one pixel only, that pixel which has been hit by one of the entagled photons of the photon pair. The other corresponding photon has had one of two possible destiny: either has got through the object and reached the light sensor behind the object, or has been absorbed by the object and never reached the light sensor. In the end since over the time the photons that reach the camera span all possible directions and hit all the pixels of the camera, superimposing all the pictures taken give a complete white image. On the other hand, if only a subset of pictures is superimposed, specifically those corresponding to those photons that had their entangled correspondent eventually reaching the light sensor, since those photons have propagation directions simmetrical to those of photons which got through the object, the said pictures have lighted all and only the pixels that reproduce the transparent region of the object. So the light sensor is used as source of information through which to accumulate useful pictures and dispose of the wrong one.</p>
       </div>
+      <div class="col-sm-6 text-center">
+
+        <div class="card border-primary border-2">
+          <div class="card-header text-center ">
+            Quantum version
+          </div>
+          <div class="card-body text-center py-4">
+            <h4 class="card-title">
+              Ghost imaging
+            </h4>
+            <p class="lead card-subtitle">
+              Very slow-speed simulation
+            </p>
+    <canvas id="ghost" class="img-fluid" width="500" height="500"></canvas>
+    <button class="btn btn-outline-primary" id="startGhost">Start Animation</button>
+    
+    <script src="https://unpkg.com/@rive-app/canvas@2.17.3"></script>
+    <script>
+      const r1 = new rive.Rive({
+        src: "ghost-imaging.riv",
+        canvas: document.getElementById("ghost"),
+        autoplay: false,
+        stateMachines: "State Machine 1",
+        onLoad: () => {
+          r1.resizeDrawingSurfaceToCanvas();
+        },
+      });
+      document.getElementById('startGhost').addEventListener('click', function() {
+        r1.reset(); // Start the animation when the button is pressed
+        r1.play(); // Start the animation when the button is pressed
+        });
+    </script>
+            <p class="card-text mx-5 text-muted">
+             On the bottom, the source of light (it must be a laser in this quantum version); immediately on top there is a nonlinear cristal; in the middle on the left, there is a transmissive rectangular object, while on the right there should be the camera objective (not represented) fundamental for the imaging to take place like in conventional imaging, and its focus must be adjusted as if the object were on the right instead of on the left; above all, on the left, there is a simple photo-detector with no spatial resolution, while on the right the camera sensor. The former notifies the latter to retain a picture, which otherwise would be disposed of.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
+</section>
+<section id="conclusions" class="bg-light">
+  <div class="container-lg my-5">
+    <div class="row align-items-center">
+      <div class="col-12 text-center text-md-start">
+        <h1>
+          <div class="display-2">Conclusions</div>
+          <div class="display-5 text-muted">Classical ghost imaging</div>
+        </h1>
+        <p class="lead my-4">Even though the internal workings of ghost imaging has been explained only for the quantum version of it, which encompass the use of a laser as a source of light to illuminate the object, the sama strategy can be applied using "normal" light.</p>
+<p class="text-muted">The main change needed for it to work is the substitution of the triggering action of the photo-sensor on the camera sensor with correlation computation between the intensities caputured by the camera sensor and the photo-sensor at each picture taken by the camera and the discarding those pictures with low correlation.</p>
+      </div>
+    </div>
+  </div>
 </section>
   </body>
 </html>
