@@ -55,19 +55,57 @@
     </nav>
     <section id="intro" class="bg-light">
     <div class="container-lg my-5">
-    <h1>Ghost Imaging</h1>
-    <div>Ghost imaging is a non-conventional way to form images of objects without ever taking pictures of them. </div>
-<div>In conventional imaging to take the picture of an object, the object must be illuminated and the optical instrument that takes the picture (like a camera, or a microscope) has its sensor invested by the light that illuminates the object after it has hit the object. </div>
-<p>Even in ghost imaging, the object still needs to be illuminated, but the camera does <em>not</em> look at the object. Instead, it records the light <em>before</em> it reaches the object.</p>
-<p>To do that, the camera is shifted sideways and we insert a <strong>beam splitter</strong>: an optical component that splits a light beam into two paths. One path continues straight to the object; the other is reflected toward the camera, so the object is no longer in the camera’s field of view.</p>
-<p>If we simply took a picture this way, we would only see the background. The “ghost” trick is to use an additional signal to reconstruct the object anyway — we’ll see how in a moment.</p>
-<p>With that clever arrangement, the object appears faintly in the reconstructed image, hence the name “ghost imaging”. The method is useful when the object cannot be directly imaged, or when it would be damaged by the wavelengths your camera can detect (in that case, the split can be done by wavelength, sending only “safe” components to the object and the remaining ones to the camera).</p>
-<p>A key limitation is that ghost imaging is a <strong>multi-shot</strong> technique: it requires many acquisitions, so the object must remain still long enough.</p>
-<p>The extra piece of information comes from a very simple detector placed after the object. Unlike a camera sensor made of many pixels, this detector has no spatial resolution: it only tells us whether light arrived (“bright”) or not (“dark”).</p>
-<p>The camera, sitting on the reference path, records many frames of the reference light. If we sum all frames, the object disappears (because the camera never sees it). But if we keep only the frames for which the detector behind the object registered light, and discard the others, the transparent part of the object gradually emerges.</p>
-<p>Why does this selection work? It becomes clearer in the quantum version, where correlations are explicit. Before that, let’s recall how a normal photo forms if we think of light as photons.</p>
-<p>To unveil the secret of its working it is simpler to examine the quantum version of the ghost imaging technique, which makes use of a special light for illumination, but before that quantum nature of light must be understood as a stream of photons.</p>
+
+
+
+
+    <div class="row align-items-center">
+      <div class="col-sm-6 text-center text-md-start">
+        <h1>
+          <div class="display-2">Ghost Imaging</div>
+        </h1>
+
+
+
+        <p class="lead my-3">Ghost imaging is a non-conventional way to form images of objects without ever taking pictures of them.</p>
+        <p>In conventional imaging, to take a picture of an object, the object must be illuminated and the sensor of the optical instrument (a camera, a microscope, …) is hit by the same light <em>after</em> it interacted with the object.</p>
+        <p>Even in ghost imaging, the object still needs to be illuminated, but the camera does <em>not</em> look at the object. Instead, it records the light <em>before</em> it reaches the object.</p>
+        <p>To do that, the camera is shifted sideways and we insert a <strong>beam splitter</strong>: an optical component that splits a light beam into two paths. One path continues straight to the object; the other is reflected toward the camera, so the object is no longer in the camera’s field of view.</p>
+        <p>If we simply took a picture this way, we would only see the background (because the object is never in the camera’s field of view). The “ghost” trick is to use an additional signal to reconstruct the object anyway — we’ll see how in a moment.</p>
+        <p>With that clever arrangement, the object appears faintly in the reconstructed image, hence the name “ghost imaging”. The method is useful when the object cannot be directly imaged, or when it would be damaged by the wavelengths your camera can detect (in that case, the split can be done by wavelength, sending only “safe” components to the object and the remaining ones to the camera).</p>
+        <p>A key limitation is that ghost imaging is a <strong>multi-shot</strong> technique: it requires many acquisitions, so the object must remain still long enough.</p>
+
+        <p>The extra piece of information comes from a very simple detector placed after the object. Unlike a camera sensor made of many pixels, this detector has no spatial resolution: it only tells us whether light arrived (“bright”) or not (“dark”).</p>
+        <p>The camera, sitting on the reference path, records many frames of the reference light. If we sum all frames, the object disappears (because the camera never sees it).</p>
+        <p>Here is the key point: when the detector behind the object registers light, we keep the corresponding frame; when it registers darkness, we discard it. By summing only the “kept” frames, the transparent parts of the object gradually emerge.</p>
+
+        <p>Why does this selection work? It becomes clearer in the quantum version, where correlations are explicit. Before that, let’s recall how a normal photo forms if we think of light as a stream of photons.</p>
+        <p>To unveil the secret of how it works, it is often simpler to examine the quantum version of ghost imaging, which uses a special kind of light for illumination. But before that, we need to interpret the quantum nature of light as a stream of photons. To understand this, let’s see it at work in conventional imaging first.</p>
+      </div>
+
+      <div class="col-sm-6 text-center">
+
+        <div class="card border-primary border-2">
+          <div class="card-header text-center ">
+            Classical version
+          </div>
+          <div class="card-body text-center py-4">
+            <h4 class="card-title">
+              Ghost imaging
+            </h4>
+            <p class="lead card-subtitle">
+              Photographic setup
+            </p>
+    <img src="ghost_imaging.png" class="img-fluid" alt="ghost imaging setup" width="500" height="500"> 
+            <p class="card-text mx-5 text-muted">
+             From bottom to top: the light source illuminates the object; the camera does not frame the object but only the source lighting it. Still, an image of the object can be reconstructed thanks to the information collected by the light detector behind the object.
+            </p>
+          </div>
+        </div>
+      </div>
+
 </div>
+
 </section>
 <section id="conventional_imaging"  class="bg-light">
   <div class="container-lg my-5">
