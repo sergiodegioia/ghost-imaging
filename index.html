@@ -1,9 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ghost Imaging</title>
+    <link rel="alternate" hreflang="it" href="index.html">
+    <link rel="alternate" hreflang="en" href="index-2.html">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!--link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css"-->
   <style>
@@ -43,6 +45,11 @@
               Conclusions
             </a>
           </li>
+          <li class="nav-item ms-md-3">
+            <a class="nav-link fw-bold" href="index-2.html" aria-label="Passa alla versione in inglese">
+              EN
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -62,9 +69,15 @@
         
         <p class="lead my-3">Il ghost imaging è un modo non convenzionale per formare immagini di oggetti senza mai farne una foto. </p>
 <div>Nel modo convenzionale per formare immagini, per fare una foto di un oggetto, l'oggetto deve essere illuminato e il sensore dello strumento ottico che fa la foto (come per esempio una macchina fotografica, un microscopio, ...) viene investito dalla stessa luce che colpisce l'oggetto. </div>
-<p>Persino nel ghost imaging, l'oggetto di cui se ne vuole fare un'immagine deve essere illuminato, ma il sensore della macchina fotografica raccoglie la luce che illuminerà l'oggetto prima che questa colpisca l'oggetto. In pratica la macchina fotografica è spostata lateralmente in modo tale che l'oggetto non risulta più inquadrato. Quindi si usa un beam splitter per suddividere il fascio di luce predisposto per illuminare l'oggetto in due metà prima che incontri l'oggetto: una metà procede in linea retta fino all'oggetto come sarebbe accaduto se nessun beam splitter fosse stato interposto, l'altra metà viene deviata, come se avesse incontrato uno specchio, e procede secondo un'altra direzione lungo cui viene disposto l'obiettivo della macchina fotografica che quindi non inquadra più l'oggetto. Questa configurazione dovrebbe quindi fornire un'immagine dello sfondo della scena senza l'oggetto, tuttavia, con  un ingegnoso accorgimento i cui dettagli sono forniti a breve, nell'immagine compare in sembianze evanescenti ed effimere l'oggetto la cui presenza inattesa ha un non so che di spettrale, cosa che insieme alla sua flebile consistenza ha indotto gli scienziati a usare il termine suggestivo "fantasma" per etichettare la tecnica. Una tale tecnica trova utili applicazioni pratiche ogni volta che l'oggetto non può essere inquadrato dalla macchina fotografica per i più svariati motivi o quando l'oggetto non può essere illuminato, senza che si danneggi, da luce di lunghezza d'onda a cui il sensore della macchina fotografica è sensibile: in quest'ultimo caso l'appena citata suddivisione del fascio di luce è realizzata su base frequenziale, inviando solo certe componenti frequenziali della luce verso l'oggetto, quelle innocue, e la parte rimanente verso la macchina fotografica. Una caratteristica limitante della tecnica del ghost imaging consiste nel fatto che si tratta di una tecnica multi-scatto, e per tanto l'oggetto non può essere in movimento per un periodo di tempo sufficientemente lungo in modo da consentire di scattare un considerevole numero di foto quante sono necessarie per otterene un'immagine abbastanza nitida.</p>
+<p>Anche nel ghost imaging l’oggetto che si vuole fotografare deve essere illuminato, ma la macchina fotografica non guarda l’oggetto: registra invece la luce <em>prima</em> che questa lo colpisca.</p>
+<p>Per ottenere questo risultato si sposta la macchina lateralmente e si inserisce un <strong>divisore di fascio</strong> (in inglese <em>beam splitter</em>): un componente ottico che separa un fascio luminoso in due parti. Un ramo continua verso l’oggetto; l’altro viene deviato verso l’obiettivo della macchina fotografica, che quindi non inquadra più l’oggetto.</p>
+<p>In teoria, così, la foto mostrerebbe solo lo sfondo (perché l’oggetto non è mai nel campo della camera). Il “trucco” del ghost imaging è usare un’informazione aggiuntiva per ricostruire comunque l’immagine: tra poco vediamo come.</p>
+<p>Con un ingegnoso accorgimento, nell’immagine compare in sembianze evanescenti ed effimere l’oggetto, la cui presenza inattesa ha qualcosa di spettrale: da qui il termine suggestivo “fantasma”. La tecnica è utile quando l’oggetto non può essere inquadrato per vari motivi o quando non può essere illuminato con la lunghezza d’onda a cui il sensore è sensibile (per esempio perché si danneggerebbe).</p>
+<p>Un limite importante è che il ghost imaging è una tecnica <strong>multi-scatto</strong>: servono molte acquisizioni, quindi l’oggetto deve restare fermo abbastanza a lungo per ottenere un’immagine nitida.</p>
 
-<p>L'accorgimento ingegnoso, come promesso di svelare, è tanto semplice quanto non scontato: dove ci si aspetterebbe di trovare l'apparecchio fotografico in un sistema di imaging convenzionale, cioè dopo l'oggetto, viene posto invece un banale sensore di luce tramite cui la luce dall'oggetto viene raccolta. Il sensore di luce non è come il sensore di un apparecchio fotografico che è fatto da una miriade di piccolissimi sensori di luce, detti pixel, ciascuno dei quali si prende cura di guardare una così piccola regione dell'intera inquadratura, distinta da quelle degli altri, allo scopo di ricostruire insieme agli altri l'intera imamgine. Così il sensore di luce posto dietro l'oggetto è come un apparecchio fotografico ad un solo pixel che può vedere soltanto chiaro o scuro, ma nessun dettaglio dell'oggetto per quanto possano essere evidenti. A questo punto, l'apparecchio fotografico scatta una grande quantità di foto che poi vengono sovrapposte una sull'altra come in un'unica foto a lunga esposizione, ma non tutte le foto fatte vengono tenute, perché così facendo l'immagine finale sarebbe quella dello sfondo della scena, come è naturale che accada dato che l'oggetto non è mai stato inquadrato. Le foto fatte quando il sensore di luce dietro l'oggetto ha visto buio vengono scartate, solo quelle quando il sensore ha visto luce vengono accumulate per produrre l'immagine risultante. Da questa spiegazione traspare la semplicità dalle tecnica ma non è ancora chiaro perché funziona. </p>
+<p>Il trucco è semplice: dietro l’oggetto, al posto della macchina fotografica, mettiamo un rivelatore di luce molto elementare. Non “vede” l’immagine: segnala solo se in quel momento è arrivata luce (chiaro) oppure no (buio).</p>
+<p>La macchina fotografica, invece, sta nell’altro ramo del fascio e scatta molte foto della luce di riferimento. Se sommassimo tutte le foto, l’oggetto sparirebbe: la camera non lo inquadra mai.</p>
+<p>Qui entra in gioco il rivelatore dietro l’oggetto: quando segnala che è passata luce, conserviamo la foto corrispondente; quando segnala buio, la scartiamo. Sommando solo le foto “buone” emerge la forma delle regioni trasparenti dell’oggetto.</p>
 
 <p>Per svelare il segreto del suo funzionamento è più semplice esaminare la versione quantistica della tecnica di ghost imaging, che fa uso di una speciale luce per l'illuminamento, ma prima di ciò la natura quantistica della luce deve essere interpretata come flusso di fotoni. Per capire questo aspetto vediamolo in opera durante l'imaging convenzionale.</p>
 </div>
@@ -102,12 +115,12 @@
           <div class="display-2">Luce come flusso di fotoni</div>
           <div class="display-5 text-muted">Imaging Convenzionale</div>
         </h1>
-        <p class="lead my-3">Spieghiamo come l'imaging convenzionale funziona considerando la luce come un flusso di fotoni e utilizzando come oggetto uno che sia trasmissivo, cioè che abbia regioni trasparenti attraverso le quali alla luce è consentito di passare e regioni opache dove la luce è assorbita e quindi bloccata.</p>
+        <p class="lead my-3">Per capire come nasce una foto, immaginiamo la luce come un flusso di fotoni e un oggetto trasmissivo: alcune zone lasciano passare la luce, altre la assorbono.</p>
 <p class="text-muted">L'animazione aiuterà a seguire il ragionamento. </p>
 
-<p>Col passare del tempo, pensando di rallentare drasticamente lo scorrere del tempo, i fotoni dalla sorgente di luce sono emessi ad una velocità che può essere osservata nell'animazione (normalmente invece vanno alla velocità della luce). Inoltre sono emessi in elevatissime quantità, dipendenti dall'intensità della luce, e così ancora una volta per semplicità di spiegazione supponiamo che l'intensità sia bassissima tanto che solo un fotone alla volta venga emesso.</p>
+<p>Per rendere visibile il processo, nell’animazione i fotoni sono mostrati come se si muovessero lentamente (nella realtà viaggiano alla velocità della luce). Inoltre, per semplicità, immaginiamo un’intensità bassissima: viene emesso un fotone alla volta.</p>
 <p>Nell'animazione i fotoni sono rappresentati come piccole palle che corrono lungo tratti rettilinei a partire dalla sorgente luminosa.</p>
-<p>Ogni volta che un fotone incontra l'oggetto in una regione trasparente procede indisturbata fino a raggiungere il sensore in un dato pixel e l'apparecchio fotografico nel processo di formazione della foto ricorda che quel pixel è stato colpito da un fotone (nell'animazione questo ricordo registrato dall'apparecchio fotografico è rappresentato dall'illluminamento del pixel colpito).</p>
+<p>Ogni volta che un fotone incontra l'oggetto in una regione trasparente procede indisturbata fino a raggiungere il sensore in un dato pixel e l'apparecchio fotografico nel processo di formazione della foto ricorda che quel pixel è stato colpito da un fotone (nell'animazione questo ricordo registrato dall'apparecchio fotografico è rappresentato dall'illuminamento del pixel colpito).</p>
 <p>D'altra parte, un fotone che incontra l'oggetto in una regione opaca viene distrutto (distruzione rappresentata nell'animazione dalla scomparsa della palla).</p>
 <p>Dato che i fotoni escono dalla sorgente di luce scegliendo una direzione che è completamente aleatoria tra tutte le possibilità, col passare del tempo tutte le possibili direzione saranno prese da almeno un fotone, in modo tale che tutti i punti dell'oggetto saranno illuminati. Ne segue che tutti e solo i pixel del sensore a cui capita di essere sul tratto rettilineo passante per la sorgente senza intersecare l'oggetto in una sua regione opaca sono illuminati e quindi presi tutti insieme riproducono la forma dell'oggetto con le sue regioni di trasparenza ed opacità.</p>
       </div>
@@ -146,8 +159,11 @@
         });
     </script>
             <p class="card-text mx-5 text-muted">
-             Qui sono mostrati tre elementi: in basso, la sorgente di luce (rappresentata da una stella); nel centro, ad occupare l'intera inquadratura dell'apparecchio fotografico, c'è un oggetto rettangolare trasmissivo la cui regione di trasparenza è a forma di S reclinata mentre la parte restante è opaca; l'apparecchio fotografico è semplicemente rappresentato dal suo sensore rettangolare dove tutti i suoi pixel sono visibili (si tratta si un sensore molto rudimentale perché ha soltanto 32 pixel! Questo è il motivo per cui il profilo ad S regolare viene visto in foto come avente un contorno spigoloso). L'obiettivo dell'apparecchio fotografico non è mostrato: la sua presenza tra il sensore e l'oggetto è fondamentale perché si possa avere una immagine. 
-            </p>
+  Qui vedi tre elementi: in basso la sorgente di luce (una stella), al centro l’oggetto trasmissivo con una “finestra” a forma di S, e in alto il sensore della macchina fotografica.
+</p>
+<p class="card-text mx-5 text-muted">
+  Nota: il sensore è disegnato con pochi pixel (32) per rendere evidente l’accumulo dei fotoni, quindi i bordi della S appaiono “a gradini”.   Nell’animazione non è mostrato l’obiettivo, ma in una camera reale si trova tra oggetto e sensore ed è ciò che permette di formare l’immagine.
+</p>
           </div>
         </div>
       </div>
@@ -160,17 +176,18 @@
       <div class="col-sm-6 text-center text-md-start">
         <h1>
           <div class="display-2">Quantum ghost imaging</div>
-          <div class="display-5 text-muted">Una tecnica quantum-inspired</div>
+          <div class="display-5 text-muted">Una tecnica ispirata al quantistico</div>
         </h1>
-        <p class="lead my-4">Ora torniamo al ghost imaging quantistico. Come detto la luce in generale è un flusso di fotoni e nella luce speciale usata nel ghost imaging quantistico i fotoni si presentano sempre in coppia e in tale coppia sono correlati (entangled).</p>
-<p class="text-muted">Questi fasci di coppie di fotoni entangled sono prodotti facendo passare un fascio di luce laser attraverso un cristallo otticamente non lineare. Un laser è una sorgente di luce che emette luce fatta di fotoni di uguale frequenza; quando un tale flusso interagisce con il detto cristallo, ciascun fotone fornito dal laser si decompone in due altri fotoni che sono correlati, cioè per principi di conservazione della natura hanno frequenze più basse, ma frequenza somma esattamente identica a quella del fotone che li ha prodotti. Analogamente per la loro quantità di moto: hanno entrambi differenti direzioni di propagazione da quella del fotone che li ha prodotti ma tali che la direzione di propagazione complessiva della coppia vi si allinei ad essa, così che i due fotoni proseguono lungo direzioni orientate simmetricamente rispetto alla direzione tenuta dal fotone che li ha prodotti in un piano che li contiene. Dal cristallo quindi i fotoni entangled di ogni coppia vengono fuori non allineati tra loro, ma secondo direzioni che abbracciano due diversi intervalli non sovraposti: di questi due intervalli uno è scelto per posizionare l'oggetto insieme al sensore di luce dietro di esso e l'altro è dove viene disposto l'apparecchio fotografico. Ora il sensore di luce usato dopo l'oggetto può effettivamente essere un semplice rilevatore di luce, senza nemmeno la capacità di misurare l'intensità di luce, ma solo di rilevare la presenza o assenza di luce.</p>
-<p>A questo punto l'apparecchio fotografico comincia a scattare foto, idealmente una per ogni coppia di fotoni generati: e ancora idealmente ogni foto è totalmente nera con eccezione di un solo pixel, quel pixel che è stato colpito da uno dei fotoni entangled della coppia di fotoni. L'altro fotone corrispondente avrà avuto uno dei suoi possibili destini: o è passato attraverso l'oggetto e ha raggiunto il rivelatore di luce dietro l'oggetto o è stato assorbito dall'oggetto e non ha mai raggiunto il rivelatore di luce. Alla fine dato che nel tempo i fotoni che raggiungono l'apparecchio fotografico prendono tutte le possibili direzioni e colpiscono tutti i pixel dell'apparecchio fotografico, risulta che sovrapponendo tutte le foto fatte si ottiene un'immagine completamente bianca. D'altra parte, se invece solo un sottinsieme di foto viene sovrapposto, in particolar modo solo quelle corrispondenti a quei fotoni che hanno avuto il loro fotone correlato in grado di raggiungere il rivelatore di luce, dato che quei fotoni hanno direzioni di propagazione simmetriche a quelle dei fotoni che sono passati attraverso l'oggetto, la detta foto finale ha illuminati tutti e solo i pixel che riproducono la regione di trasparenza dell'oggetto. Così il rivelatore di luce è in pratica usato come sorgente di informazione attraverso cui accumulare le foto utili e scartare quelle sbagliate.</p>
+        <p class="lead my-4">Ora torniamo al ghost imaging quantistico. Qui si usa una luce “speciale” perché composta da coppie di fotoni generate insieme e correlate: rivelando un fotone, sappiamo qualcosa del suo compagno (in gergo: sono entangled).</p>
+<p class="text-muted">Queste coppie si ottengono facendo passare un laser in un cristallo non lineare, un materiale che può far sì che un fotone del laser <strong>si scomponga</strong> in due fotoni a energia più bassa ma correlati (processo spesso chiamato “scissione” del fotone). I due fotoni escono in direzioni correlate: uno viene inviato verso l’oggetto e un rivelatore posto dietro di esso; l’altro verso la macchina fotografica, che registra il ramo di riferimento.</p>
+<p>A questo punto la macchina fotografica scatta molte immagini, idealmente una per ogni coppia di fotoni. Ogni immagine contiene al massimo un “colpo” su un pixel (quello raggiunto dal fotone nel ramo di riferimento). Se sommiamo <em>tutte</em> le immagini, otteniamo un risultato uniforme e l’oggetto non compare, perché non è mai inquadrato.</p>
+<p>La ricostruzione avviene selezionando solo gli scatti in <strong>coincidenza</strong>: teniamo cioè le immagini per cui anche il rivelatore dietro l’oggetto ha registrato l’arrivo del fotone (segno che è passato attraverso una zona trasparente). Sommando soltanto questi scatti, emerge la sagoma della regione trasparente dell’oggetto.</p>
       </div>
       <div class="col-sm-6 text-center">
 
         <div class="card border-primary border-2">
           <div class="card-header text-center ">
-            Versiona quantistica
+            Versione quantistica
           </div>
           <div class="card-body text-center py-4">
             <h4 class="card-title">
@@ -199,8 +216,11 @@
         });
     </script>
             <p class="card-text mx-5 text-muted">
-             In basso, la sorgente di luce (deve essere un laser in questa versione quantistica); immediatamente sopra c'è un cristallo non lineare; nel centro a sinistra, c'è un oggetto rettangolare trasmissivo, mentre sulla destra dovrebbe esserci l'obiettivo dell'apparecchio fotografico (non rappresentato) fondamentale per avere una foto analogamente al caso dell'imaging convenzionale, e la sua messa a fuoco deve essere regolata come se l'oggetto fosse sulla destra invece che sulla sinistra; sopra tutto, sulla sinistra, c'è un semplice rilevatore di luce senza risoluzione spaziale, mentre sulla destra il sensore dell'apparecchio fotografico. Il primo notifica a quest'ultimo di tenere una foto, che altrimenti sarebbe scartata.
-            </p>
+  In basso c’è la sorgente (un laser, in questa versione), subito sopra un cristallo non lineare che genera coppie di fotoni correlati.   Un fotone della coppia va verso l’oggetto (al centro a sinistra) e poi verso un rivelatore semplice senza risoluzione spaziale;   l’altro va verso la macchina fotografica (a destra), che registra il pixel colpito.
+</p>
+<p class="card-text mx-5 text-muted">
+  Quando il rivelatore dietro l’oggetto segnala che è arrivata luce, la foto corrispondente viene tenuta; altrimenti viene scartata.
+</p>
           </div>
         </div>
       </div>

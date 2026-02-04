@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ghost Imaging</title>
+    <link rel="alternate" hreflang="en" href="index-2.html">
+    <link rel="alternate" hreflang="it" href="index.html">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!--link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css"-->
   <style>
@@ -43,6 +45,11 @@
               Conclusions
             </a>
           </li>
+          <li class="nav-item ms-md-3">
+            <a class="nav-link fw-bold" href="index.html" aria-label="Switch to Italian version">
+              IT
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -51,10 +58,14 @@
     <h1>Ghost Imaging</h1>
     <div>Ghost imaging is a non-conventional way to form images of objects without ever taking pictures of them. </div>
 <div>In conventional imaging to take the picture of an object, the object must be illuminated and the optical instrument that takes the picture (like a camera, or a microscope) has its sensor invested by the light that illuminates the object after it has hit the object. </div>
-<p>Even in ghost imaging, the object to be imaged must be illuminated, but the camera ingests the light that is going to illuminate the object before it encounters the object. In fact the camera is laterally shifted so much that the object goes out of its field of view. Then a beam splitter is used that splits the illuminating light beam into two halves before the object is reached: one proceeds undisturbed straight to the object as if nothing were on its path, the other is reflected as by a mirrow to enter the camera in whose field of view the object is not present anymome. This setup should give a picture of the scene background without the object, but instead, with an ingenious arrangement whose details are shortly provided, in the image there show up in an ephemeral evanescent appearance the object whose unexpected presence has a kind of spectral, which together with its faintness made scientists to use that suggestive term "ghost" to label the technique. Such a technique has useful practical application any time the object cannot be framed by the camera for various reasons or when the object cannot be illuminated, under pain of damage, by light in the same range of frequencies the camera sensor is sensible at: in this case the aforementioned light beam splitting is operated on frequency basis, sending only certain frequency light components to the object and the remaining ones to the camera. One limiting features of the technique anyway consists in the fact that it is a multi-shot technique, so the object cannot be in movement for a perior long enough to take a quite large number of shots as are needed till the image is sharp enough.</p>
-
-<p>The ingenious arrangement, as promise to unveil, is as much simple as it is not obviuos: where it was expected to have the camera in a conventional imaging system, that is, after the object a trivial light sensor is placed where light from the object is gathered. The light sensor is not like a camera sensor which is made by a myriad of light sensors, named pixels, each one taking care of looking at so tiny a region of the whole field of view, distinct from those of the other in order to reconstruct the full image. So the light sensor placed back the object is like a camera with 1 pixel only which can only see light or dark, but not even the most striking detail of the object. At this point, a lot of pictures are taken by the camera and put together like in long exposure photography but not all pictures taken are retained otherwise only the background scene would be visible in the final picture. The pictures taken while the light sensor back to the object has seen dark are disposed of, only those while the sensor has seen light are accumulated to produce the final image. So indeed it is still not obviuos why it works. </p>
-
+<p>Even in ghost imaging, the object still needs to be illuminated, but the camera does <em>not</em> look at the object. Instead, it records the light <em>before</em> it reaches the object.</p>
+<p>To do that, the camera is shifted sideways and we insert a <strong>beam splitter</strong>: an optical component that splits a light beam into two paths. One path continues straight to the object; the other is reflected toward the camera, so the object is no longer in the camera’s field of view.</p>
+<p>If we simply took a picture this way, we would only see the background. The “ghost” trick is to use an additional signal to reconstruct the object anyway — we’ll see how in a moment.</p>
+<p>With that clever arrangement, the object appears faintly in the reconstructed image, hence the name “ghost imaging”. The method is useful when the object cannot be directly imaged, or when it would be damaged by the wavelengths your camera can detect (in that case, the split can be done by wavelength, sending only “safe” components to the object and the remaining ones to the camera).</p>
+<p>A key limitation is that ghost imaging is a <strong>multi-shot</strong> technique: it requires many acquisitions, so the object must remain still long enough.</p>
+<p>The extra piece of information comes from a very simple detector placed after the object. Unlike a camera sensor made of many pixels, this detector has no spatial resolution: it only tells us whether light arrived (“bright”) or not (“dark”).</p>
+<p>The camera, sitting on the reference path, records many frames of the reference light. If we sum all frames, the object disappears (because the camera never sees it). But if we keep only the frames for which the detector behind the object registered light, and discard the others, the transparent part of the object gradually emerges.</p>
+<p>Why does this selection work? It becomes clearer in the quantum version, where correlations are explicit. Before that, let’s recall how a normal photo forms if we think of light as photons.</p>
 <p>To unveil the secret of its working it is simpler to examine the quantum version of the ghost imaging technique, which makes use of a special light for illumination, but before that quantum nature of light must be understood as a stream of photons.</p>
 </div>
 </section>
@@ -66,10 +77,10 @@
           <div class="display-2">Light as a stream of photons</div>
           <div class="display-5 text-muted">Conventional Imaging</div>
         </h1>
-<p class="lead my-4">Let's explain how conventional imaging works considering light as a stream of photons and using as the object one which is transmissive, that is, it has transparent regions through which light is allowed to pass, and opaque regions where light is absorbed and then blocked.</p>
+<p class="lead my-4">To see how a photo forms, imagine light as a stream of photons and an object that is partly transparent and partly opaque.</p>
 <p class="text-muted">The animation helps following the reasoning. </p>
 
-<p>As time passes, thinking to dramatically slow down the time progression, photons from the light source are emitted at a speed that can be seen in the animation (normally instead they go at the speed of light!). Moreover they are emitted in very high quantities, depending on the intensity of the source light, so again for the sake of the explanation let's suppose the intensity is very low that only one photon is emitted at a time.</p>
+<p>To make the process visible, the animation shows photons moving slowly (in reality they travel at the speed of light). For simplicity, we also assume the source is so weak that photons are emitted one at a time.</p>
 <p>In the animation photons are represented as small balls which run along straight lines from the light source.</p>
 <p>Every time a photon encounters the object in a transmissive region it proceeds undisturbed eventually reaching the sensor in a given pixel and the camera in the progress of taking the picture remember that that pixel has been hit by a photon (in the animation that memo is represented by the lightening of the hit pixel).</p>
 <p>On the other hand, if a photon meets the object in an opaque region it is destroyed (represented in the animation by the disappearing of the ball) and no effect is recorded by the camera.</p>
@@ -110,9 +121,12 @@
         });
     </script>
             <p class="card-text mx-5 text-muted">
-             Here three elements are shown: on the bottom, the source of light (represented by a star); in the middle, occupying the whole field of view of the camera, there is a transmissive rectangular object whose transparent region has a reclined S-shape while the remaning part is opaque; the camera simply represented by its rectangular sensor where all its pixels are visible (it's a very rudimantal sensor because it has only 32 pixels! That's why the smooth S-profile is imamged with a sharp-cornered straight line contour). The camera objective has not been shown: its presence between the sensor and the object is fundamental for the imaging to take place. 
-            </p>
-          </div>
+  You can see three elements: at the bottom the light source (a star), in the middle a transmissive object with an S-shaped “window”, and at the top the camera sensor.
+</p>
+<p class="card-text mx-5 text-muted">
+  Note: the sensor is drawn with only 32 pixels to make the accumulation of photons easy to see, so the S edge looks “stair-stepped”. The lens is not shown in the animation, but in a real camera it sits between object and sensor and is what forms the image.
+</p>
+</div>
         </div>
       </div>
     </div>
@@ -124,12 +138,13 @@
       <div class="col-sm-6 text-center text-md-start">
         <h1>
           <div class="display-2">Quantum ghost imaging</div>
-          <div class="display-5 text-muted">A quantum inspired technique</div>
+          <div class="display-5 text-muted">A quantum-inspired technique</div>
         </h1>
-        <p class="lead my-4">Now let's get back to the quantum ghost imaging. As said the light in general is a stream of photons, and the special light used in quantum ghost imaging photons always occur in pairs in which they are entangled.</p>
-<p class="text-muted">Those stream of pairs of entangled photons are produced by letting a laser pass through a nonlinear crystal. A laser is a light source device which emits light made up of photons of equal frequency; when such stream interacts with the said crystal, each photon provided by the laser breaks up in two other photons which are entangled, that is for the conservation principles of the nature have frequencies lower than, but which sum up to, exactly that of the producing photon. Similarly for their momentum: they have both different propagation directions than that of the producing photon but to that of which the direction of the global propagation of the photon pair aligns to, in such a way that they go along directions oriented simmetrically around the direction of the producing photon in a plane containing it. From the crystal then the entangled photons of any pair comes out not aligned between them, with different non-overlapping range of directions: of those two ranges one is chosen to deploy the object followed by the light sensor and the other is where the camera is laid out. Now the light sensor used after the object can really be simply a light detector, without even the ability to sense the light intensity, but only the presence or absence of light.</p>
-<p>At this point the camera starts taking pictures, ideally one for each photon pair generated: and still ideally any picture is totally dark with the exception of one pixel only, that pixel which has been hit by one of the entagled photons of the photon pair. The other corresponding photon has had one of two possible destiny: either has got through the object and reached the light sensor behind the object, or has been absorbed by the object and never reached the light sensor. In the end since over the time the photons that reach the camera span all possible directions and hit all the pixels of the camera, superimposing all the pictures taken give a complete white image. On the other hand, if only a subset of pictures is superimposed, specifically those corresponding to those photons that had their entangled correspondent eventually reaching the light sensor, since those photons have propagation directions simmetrical to those of photons which got through the object, the said pictures have lighted all and only the pixels that reproduce the transparent region of the object. So the light sensor is used as source of information through which to accumulate useful pictures and dispose of the wrong one.</p>
-      </div>
+        <p class="lead my-4">Now let’s return to quantum ghost imaging. The illumination is “special” because it consists of photon pairs created together and correlated: by detecting one photon we gain information about its partner (often described as entanglement).</p>
+<p class="text-muted">The pairs are produced by sending a laser through a nonlinear crystal, which can make one laser photon <strong>split</strong> into two lower-energy photons whose total energy matches the original. The two photons emerge in correlated directions: one goes toward the object and a simple detector behind it; the other goes toward the camera on the reference arm.</p>
+<p>The camera records many frames, ideally one per pair. Each frame contains at most a single hit on one pixel (from the reference photon). If we sum <em>all</em> frames, we get a uniform image and the object does not appear, because it is never in the camera’s field of view.</p>
+<p>The image appears when we keep only the frames that are in <strong>coincidence</strong>: those for which the detector behind the object also clicked (meaning the other photon passed through a transparent region). Summing only these selected frames reveals the transparent part of the object.</p>
+</div>
       <div class="col-sm-6 text-center">
 
         <div class="card border-primary border-2">
@@ -163,9 +178,12 @@
         });
     </script>
             <p class="card-text mx-5 text-muted">
-             On the bottom, the source of light (it must be a laser in this quantum version); immediately on top there is a nonlinear cristal; in the middle on the left, there is a transmissive rectangular object, while on the right there should be the camera objective (not represented) fundamental for the imaging to take place like in conventional imaging, and its focus must be adjusted as if the object were on the right instead of on the left; above all, on the left, there is a simple photo-detector with no spatial resolution, while on the right the camera sensor. The former notifies the latter to retain a picture, which otherwise would be disposed of.
-            </p>
-          </div>
+  At the bottom there is the source (a laser), and just above it a nonlinear crystal that generates correlated photon pairs. One photon goes to the object (left) and then to a simple detector with no spatial resolution; the other goes to the camera (right), which records the hit pixel.
+</p>
+<p class="card-text mx-5 text-muted">
+  When the detector behind the object registers light, the corresponding camera frame is kept; otherwise it is discarded.
+</p>
+</div>
         </div>
       </div>
     </div>
